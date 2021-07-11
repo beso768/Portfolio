@@ -1,0 +1,275 @@
+@media (max-width:1024px) {
+    //header
+    header{
+        height: 10px;
+        position: fixed;
+        z-index: 20;
+        @include shadow(4px,$font-white);
+        nav{
+            clip-path: polygon(0px 0px, 100% 0, 100% 100%, 37% 100%);
+            position: absolute;
+            min-width: 0;
+            width: 151px;
+            padding-right: 3%;
+            ul{
+                display: none;
+                opacity: 0;
+            }
+        }
+        .burgerIcon{
+            display: flex;
+        }
+    }
+    //popup
+    #popup-wrapper{
+        #popup{
+            clip-path: polygon(83% 0, 88% 5%, 100% 5%, 100% 100%, 0 100%, 0 0);
+            width: 85%;
+            height: 92%;
+            top: 5%;
+            padding-top: 43px;
+            justify-content: space-between;
+            overflow: hidden;
+            background: #1b242f;
+            .detailDescription{
+                background: aliceblue;
+                p{
+                    text-align: center;
+                }
+                .projectLinks{
+                    justify-content: center;
+                }
+            }
+            #img-wrapper{
+                height: inherit;
+                border-radius: 0;
+                .fa-times{
+                    top: -38px;
+                    left: 13px;
+                    opacity: 1;
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    //banner
+    .banner-text{
+        align-items: center;
+        height: auto;
+        padding: 5%;
+        h1{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+    }
+    //projects
+    .projects-section{
+        .projects-wrapper .project{
+            min-width: 0;
+            .description h4{
+                font-size: 50px;
+            }
+        }
+    }
+    // about
+    .about-section{
+        p{
+            font-size: 30px;
+        }
+        .languages-section{
+            h4{
+                text-align: center;
+                font-size: 30px;
+            }
+            .front-end-logos{
+                div{
+                    width: 30%;
+                    img{
+                        width: 131px;
+                        height: 150px;
+                    }
+                }
+
+            }
+        }
+    }
+    //contact
+    #contact{
+        p{
+            text-align: center;
+            font-size: 30px;
+        }
+        .links i{
+            font-size: 85px;
+        }
+    }
+}
+@media (max-width:920px){
+    //projects
+    .projects-section{
+        padding: 2%;;
+        .projects-wrapper{
+            justify-content: center;
+            .project{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 0px 0 5% 0px;
+                .description{
+                    h4{
+                        font-size: 42px;
+                    }
+                }
+            }
+        }
+    }
+    //about
+    .about-section{
+        .languages-section .front-end-logos{
+            margin: 40px 0;
+            div img {
+                width: 100px;
+                height: 111px;
+            }
+        }
+    }
+    //contact
+    #contact{
+        .content-wrapper {
+            flex-wrap: wrap;
+            form{
+                width: 100% !important;
+                margin-bottom: 5%;
+            }
+        }
+        .text-side{
+            width: 100% !important;
+            .paragraphs{
+                padding-left: 0 !important;
+            }
+        }
+        .links{
+            a{
+                margin:10px 30px;
+            }
+            .fa-github,.fa-facebook{
+                margin-right: 0px;
+            }
+        }
+    }
+}
+@media (max-width:770px){
+        #popup-wrapper{
+            #popup{
+                clip-path: polygon(71% 0px, 78% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px);
+                width: 95%;
+                height: 92%;
+                top: 5%;
+                #img-wrapper {
+                    .fa-chevron-left,.fa-chevron-right{
+                        backdrop-filter: contrast(0.5);
+                        font-size: 60px;
+                    }
+                }
+                .detailDescription a{
+                    font-size: 27px;
+                    width: 202px;
+                    height: 56px;
+                }
+            }
+        }
+
+}
+@media (max-width:600px){
+    //banner
+    .banner-text{
+        h1{
+            font-size: 68px;
+            line-height: 63px;
+        }
+    }
+    //popup
+    #popup-wrapper{
+        #popup{
+            clip-path: polygon(62% 0px, 70% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px);
+        }
+    }
+    //about
+    .about-section .languages-section .front-end-logos{
+        flex-wrap: wrap;
+        div{
+            width: 100%;
+            margin-bottom: 30px;
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media (max-width:420px){
+    //header
+    header{
+        height: 5px;
+        nav{
+            width: 115px;
+            .burgerIcon{
+                height: 45px;
+            }
+        }
+    }
+    //banner
+    .banner-text{
+        height: 50%;
+        a{
+            flex-direction: column;
+            font-size: 20px;
+        }
+        h1{
+            font-size: 47px;
+            line-height: 44px;   
+        }
+    } 
+    //popup
+    #popup-wrapper #popup {
+        clip-path: unset;
+        width: 95%;
+        height: 92%;
+        top: 6%;
+        padding-top: 0;
+        #img-wrapper .fa-times {
+            top: 6px;
+        }
+    }
+    //projects
+    .projects-section{
+        h2{
+            margin: 34px 0px;
+        }
+        .projects-wrapper .project {
+        .image{
+            height: 300px;
+            width: 100%;
+        }
+        .description{
+                h4{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    //about
+    .about-section p{
+        font-size: 27px;
+    }
+
+    //contact
+    #contact {
+        .content-wrapper #contact-form button{
+            width: 100% !important;
+        }
+        .links i {
+            font-size: 70px;
+        }
+    }
+}

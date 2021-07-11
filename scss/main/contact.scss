@@ -1,0 +1,62 @@
+#contact{
+    @include section;
+    @include justify(space-between);
+    background: rgba(19, 19, 19, 0.91);
+    backdrop-filter: blur(3px);
+    .content-wrapper{
+        @include justify(space-between);
+        #contact-form{
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+            textarea,input{
+                background-color: #636363;
+                border: none;
+                outline: none;
+                padding-left: 10px;
+                @include font('noto sans',20px,$font-white)
+            }
+            input{
+                min-height: 50px;
+                margin-bottom: 3%;
+            }
+            textarea{
+                height: 70%;
+            }
+            button{
+                @include button;
+                display: block;
+                margin-top: 10px;
+                width: 100%;
+                background: $blue;
+                cursor: pointer;
+                &:hover{
+                    background: rgb(2 95 134);
+                }
+            }
+        }
+        .text-side{
+            @include justify(space-between);
+            flex-direction: column;
+            width: 48%;
+            .paragraphs{
+                @include font('noto sans',$font-size2,$font-white);
+                padding-left: 3%;
+                p{
+                    margin-bottom: 20px;    
+                }
+            }
+        }
+    }
+    .links{
+        @include justify(center);
+        padding-top: 3%;
+        i{
+            color: $font-white;
+        }
+        :nth-child(1){
+            margin-right: 30px;
+        }
+    }
+
+}

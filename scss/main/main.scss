@@ -1,0 +1,197 @@
+html,body{
+    scroll-behavior: smooth;
+}
+html {
+  font-size: 30px;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+  height: 100vh !important;
+  object-fit: contain;
+  position: fixed;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(233, 233, 233);
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+#popup-wrapper{
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  backdrop-filter: brightness(0.5);
+  // popup 
+  #popup{
+    width: 85%;
+    height: 92%;
+    background: aliceblue;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%);
+    top: 5%;
+    border-radius: 10px;
+    @include shadow(3px, #ffffff59);
+    #img-wrapper{
+      background-image: url('');
+      width: 100%;
+      height: 65%;
+      position: relative;
+      background-position: top;
+      background-size: cover;
+      border-radius: 10px;
+      transition: all 0.1s;
+      @include shadow(8px ,black);
+      .fa-times{
+        @include icons;
+        top: -38px;
+        right: 0;
+        opacity: 0;
+      }
+      .fa-chevron-left{
+        left: 5px;
+      }
+      .fa-chevron-right ,.fa-chevron-left {
+        @include icons;
+        bottom: 13px;
+        padding: 10px;
+        &:hover{
+          backdrop-filter: brightness(0.5);
+        }
+      }
+      .fa-chevron-right{
+        right: 5px;
+      }
+      &:hover .fa-times{
+        opacity: 1;
+      }
+    }
+
+    .detailDescription{
+      padding: 2%;
+      @include justify(space-between);
+      flex-direction: column;
+      .popupHeader{
+        @include d-flex(space-between,center);
+        h4{
+          @include font('roboto',$font-size2,#000000c7)
+        }
+        small{
+          color: #545454;
+          .fa-calendar-alt{
+            margin-right: 10px
+          }
+          @media (max-width:768px){
+              font-size: 20px;
+          }
+        }
+      }
+
+      p{
+        @include font('roboto',25px,#000000c7);
+        margin: 2% 0;
+        #popupTools{
+          color: rgb(165 165 165);
+        }
+      }
+      a{
+        @include button;
+        width: 220px;
+        height: 67px;
+      }
+      .projectLinks{
+        display: flex;
+        #gitLink{
+          margin-left: 3%;
+          background: $blue;
+        }
+        #webLink{
+          background: $pink;
+        }
+      }
+    }
+  }
+
+}
+.navChange{
+  width: 100vw;
+  height: 100vh;
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  @media (max-width:420px){
+    clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%);
+  }
+  background-color: rgb(27 36 47 / 97%);
+  position: fixed;
+}
+.liChange{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+}
+.line1Change{
+  transform: rotate(134deg) translate(-2px, -11px);
+  width: 50px !important;
+}
+.line2Change{
+  display: none;
+}
+.line3Change{
+  transform: rotate(45deg) translate(3px, -11px);
+  width: 50px !important;
+}

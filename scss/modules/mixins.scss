@@ -1,0 +1,70 @@
+@mixin justify($arg){
+    display:flex;
+    justify-content: $arg;
+}
+@mixin d-flex($justify,$align){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin icons{
+    position: absolute;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+@mixin button{
+    @include d-flex(space-around,center);
+    @include font('noto sans',30px,$font-white);
+    width: 340px;
+    height: 85px;
+    @media (max-width:420px){
+        width: 300px;
+        height: 75px;
+    }
+    background: transparent;
+    border: none;
+    backdrop-filter: brightness(0.5);
+    transition: 0.2s;
+    &:hover{
+      background-color: $blue;
+      border-color: $blue;
+      @include shadow(6px,white)
+    }
+    @media (max-width:420px){
+        width: 240px;
+    }
+}
+@mixin section{
+    @include justify(space-between);
+    flex-direction: column;
+    padding: 2% 5%;
+    h2{
+        @include font('roboto-bold',$font-size1,$font-white);
+        margin: 3% 0;
+        position: relative;
+        width: fit-content;
+        @media (max-width:1024px){
+            font-size: 70px;
+        }
+        @media (max-width:920px){
+            font-size: 60px;
+            text-align: center;
+            width: auto;
+        }
+        @media (max-width:1024px){
+            font-size: 50px;
+        }
+    }
+}
+@mixin font($family,$size,$color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+@mixin border($px,$type,$color){
+    border: $px $type $color;
+}
+@mixin shadow($arg,$color){
+    box-shadow: 0px 0px $arg 0 $color;
+}

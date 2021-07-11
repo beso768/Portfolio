@@ -4,24 +4,181 @@
   <meta charset="utf-8">
   <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" href="js/fontawesome-free-5.15.3-web/css/all.css">
+  <link rel="stylesheet" media="screen" href="styles/style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+    <nav id="navbar">
+      <ul id="list">
+        <li><a href="#home" id="li">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="burgerIcon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </nav>
   </header>
+    <!-- canvas animation -->
+  <div id="particles-js"></div>
+  <div class="banner-text" id="home">
+    <h1>Hello , <span>I'm Beso</span><br /> Front-end developer</h1>
+    <a href="#projects">
+      View my projects
+      <i class="fas fa-angle-double-down"></i>
+    </a>
+  </div>
+  <!-- popup  -->
+  <section id="popup-wrapper">
+    <div id="popup">
+      <div id="img-wrapper">
+        <i class="fas fa-times fa-2x"></i>
+        <i class="fas fa-chevron-left fa-4x"></i>
+        <i class="fas fa-chevron-right fa-4x"></i>
+      </div>
+      <div class="detailDescription">
+        <div class="popupHeader">
+          <h4 id="popupTitle">Online iliauni</h4>
+          <small><i class="far fa-calendar-alt"></i><span id='popupDuration'></span></small>
+        </div>
+        <p id='popupText'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quo unde et delectus rem nam modi ipsum eaque a exercitationem explicabo praesentium accusamus! Quia ipsa cum placeat. Dignissimos, eos nemo!</p>
+        <p>Tools:<span  id='popupTools'></span> </p>
+        <div class="projectLinks">
+          <a href="#" id='webLink' target="_blank">View Website</a>
+          <a href="#" id='gitLink' target="_blank">View Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <project section> -->
+  <section class="projects-section" id="projects">
+    <h2 id="projectTitle"></h2>
+    <div class="projects-wrapper">
+      <div class="project" id="1">
+        <div class="image">
+          <img src="./images/iliauni1.png" alt="iliauni1">
+          <div class="hoverBtn">
+            View details
+          </div>
+        </div>
+        <div class="description">
+          <h4>Online Iliauni</h4>
+        </div>
+      </div>
+      <div class="project" id="2">
+        <div class="image">
+          <img src="./images/book3.png" alt="interactive-books" >
+          <div class="hoverBtn">
+            View details
+          </div>
+        </div>
+        <div class="description">
+          <h4>Interactive books library</h4>
+        </div>
+      </div>
+      <div class="project" id="3">
+        <div class="image">
+          <img src="./images/motorcycle-website4.png" alt="motorcycle-service" id="test">
+          <div class="hoverBtn">
+            View details
+          </div>
+        </div>
+        <div class="description">
+          <h4>Motorcycle Service</h4>
+        </div>
+      </div>
+      <div class="project" id="4">
+      <div class="image">
+        <img src="./images/promodoro.png" alt="promodoro">
+        <div class="hoverBtn">
+          View details
+        </div>
+      </div>
+      <div class="description">
+        <h4>Promodoro Clock</h4>
+      </div>
+      </div>
+      <div class="project" id="5">
+        <div class="image">
+          <img src="./images/drum-machine.png" alt="drum-machine">
+          <div class="hoverBtn">
+            View details
+          </div>
+        </div>
+        <div class="description">
+          <h4>Drum Machine</h4>
+        </div>
+      </div>
+      <div class="project" id="6">
+        <div class="image">
+          <img src="./images/markdown.png" alt="markdown">
+          <div class="hoverBtn">
+            View details
+          </div>
+        </div>
+        <div class="description">
+          <h4>Markdown Previewer</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-section" id="about">
+    <h2 id="aboutTitle"></h2>
+    <p>I’m a Front-End Developer located in Tbilisi ,Georgia.</p>
+    <p>Well-organized,problem solver,independent person with hight attention to detail.Interested in the entire frontend spectrum.</p>
+    <p>I love creating pages where I’m able to actually create enjoyable interactions and experiences for everyone.</p>
+    <p>If you're looking for a developer to add to your team, I'd love to hear from you!</p>
+    <div class="cvBtn">
+      <a href="./CV.pdf" id="cv" download>Download CV</a>
+    </div>
+    <div class="languages-section">
+      <h4>Languages I can speak</h4>
+      <div class="front-end-logos">
+        <div class="html">
+          <img src="./images/htmlLogo.svg" alt="htmlLogo">
+        </div>
+        <div class="css">
+          <img src="./images/CSS3_logo_and_wordmark.svg.svg" alt="cssLogo">
+          <p>(Bootstrap , SCSS , SASS)</p>
+        </div>
+        <div class="javascript">
+          <img src="./images/javascript-logo.svg" alt="javascriptLogo">
+          <p>(React , Jquery)</p>
+        </div>
+      </div>
+    </div>
 
-<!-- particles.js container -->
-<div id="particles-js"></div>
+  </section>
+  <section id="contact">
+    <h2 id="contactTitle"></h2>
+    <div class="content-wrapper">
+      <form id="contact-form" action="https://formsubmit.co/besogigashvili818@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea type="text" name="message" placeholder="Type here..." required></textarea>
+        <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
+      </form>
+      <div class="text-side">
+        <div class="paragraphs">
+          <p>I’m interested in freelance opportunities – especially ambitious or large projects.</p>
+          <p>However, if you have other request or question,don’t hesitate to use the form.</p>
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://github.com/beso768?tab=repositories" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+      <a href="https://www.facebook.com/beso.gigashvili/" target="_blank"><i class="fab fa-facebook fa-5x"></i></a>
+    </div>
+  </section>
+
 
 <!-- scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
 <script src='js/particles.js'></script>
 <script src="js/app.js"></script>
 

@@ -1,0 +1,56 @@
+header{
+    background-color: $background;
+    @include justify(flex-end);
+    width: 100%;
+    height: 14px;
+    position: relative;
+    nav{
+        @include  justify(flex-end);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 7% 100%);
+        background-color: $background;
+        position: absolute;
+        min-width: 840px;
+        z-index: 1;
+        padding-right: 2%;
+        transition: 0.1s;
+        ul{
+            @include  d-flex(space-between,center);
+            height: 100%;
+            transition: 0.3s;
+            li{
+                padding: 21px 0px;
+                a{
+                    @include font('roboto-bold',$font-size2,$font-white);
+                    padding: 2px 17px; 
+                    border-radius: 50px;
+                    transition: 0.2s;
+                }
+                &:hover a{
+                    box-shadow: 0px 0px 9px 0px salmon;
+                }
+            }
+        }
+    }
+    .burgerIcon{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        height:58px;
+        .line1,.line2,.line3{
+            width: 60px;
+            height: 4px;
+            background: rgb(233, 233, 233);
+            margin: 4px 0;
+            border-radius: 1px;
+            align-self: flex-end;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .line2{
+            width: 50px;
+        }
+        .line3{
+            width: 38px;
+        }
+    }
+}

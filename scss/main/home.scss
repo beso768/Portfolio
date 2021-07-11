@@ -1,0 +1,26 @@
+
+.banner-text{
+  @include justify(space-around);
+  flex-direction: column;
+  padding: 2% 5%;
+  width: 100%;
+  height: 50%;
+  background: rgba(158, 158, 158, 0.31);
+  position: absolute;
+  top: 25%;
+  backdrop-filter: blur(5px);
+  h1{
+    @include font('noto-bold',92px,$primary);
+    line-height: 100px;
+    span{
+      color: $font-pink;
+    }
+  }
+  a{
+    @include button;
+    img{
+      border-radius: 50%;
+      border-radius: 1px solid $font-white;
+    }
+  }
+}
