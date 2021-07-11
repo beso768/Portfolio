@@ -129,11 +129,12 @@ function openMenu(){
     $('.line2').toggleClass(() => 'line2Change')
     $('.line3').toggleClass(() => 'line3Change')
 }
-
 burgerIcon.click(() => {
     openMenu()
 })
 // on list click toggle menu 
 for(let i = 0 ; i < list.children().length ; i++ ){
-    list.children()[i].addEventListener('click',() => openMenu())
+    list.children()[i].addEventListener('click',() => {
+        navbar.hasClass('navChange') ? openMenu() :null;
+    })
 }
