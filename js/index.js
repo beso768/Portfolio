@@ -6,7 +6,7 @@ $('#contactTitle').text("<Contact>");
 
 const projectsArr = [
     {
-        images:['../images/iliauni1.png','../images/iliauni2.png','../images/iliauni3.png','../images/iliauni4.png'],
+        images:['./images/iliauni1.png','./images/iliauni2.png','./images/iliauni3.png','./images/iliauni4.png'],
         title:'Online Iliauni',
         text:"",
         tools:'Html,Css(Bootrstrap),Javascript',
@@ -16,7 +16,7 @@ const projectsArr = [
 
     },
     {
-        images:['../images/book3.png','../images/book2.png'],
+        images:['./images/book3.png','./images/book2.png'],
         title:'Interactive Books Library',
         text:"",
         tools:'Html,Css(Bootstrap),Javascript',
@@ -26,7 +26,7 @@ const projectsArr = [
 
     },
     {
-        images:['../images/motorcycle-website3.png','../images/motorcycle-website1.png','../images/motorcycle-website2.png','../images/motorcycle-website5.png','../images/motorcycle-website4.png'],
+        images:['./images/motorcycle-website3.png','./images/motorcycle-website1.png','./images/motorcycle-website2.png','./images/motorcycle-website5.png','./images/motorcycle-website4.png'],
         title:'Motorcycle Service',
         text:"",
         tools:'Html,Css,Javascript',
@@ -36,7 +36,7 @@ const projectsArr = [
 
     },
     {
-        images:['../images/promodoro.png'],
+        images:['./images/promodoro.png'],
         title:'Promodoro clock',
         text:"",
         tools:'Html,Css(Bootstrap),React',
@@ -46,7 +46,7 @@ const projectsArr = [
 
     },
     {
-        images:['../images/drum-machine.png'],
+        images:['./images/drum-machine.png'],
         title:'Interactive Books Library',
         text:"",
         tools:'Html,Css(Bootstrap),React',
@@ -56,7 +56,7 @@ const projectsArr = [
 
     },
     {
-        images:['../images/markdown.png'],
+        images:['./images/markdown.png'],
         title:'Markdown Previewer',
         text:"",
         tools:'Html,Css(SCSS),React',
