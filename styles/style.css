@@ -961,14 +961,18 @@ header .burgerIcon .line3 {
     height: 5px;
   }
   header nav {
-    width: 115px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+    width: 92px;
   }
   header nav .burgerIcon {
-    height: 45px;
+    height: 41px;
+  }
+  header nav .burgerIcon .line1, header nav .burgerIcon .line2, header nav .burgerIcon .line3 {
+    margin: 3px 0px;
   }
 
   .banner-text {
-    height: 50%;
+    height: 320px;
   }
   .banner-text a {
     flex-direction: column;
@@ -983,11 +987,32 @@ header .burgerIcon .line3 {
     clip-path: unset;
     width: 95%;
     height: 92%;
-    top: 6%;
+    top: 50px;
     padding-top: 0;
   }
   #popup-wrapper #popup #img-wrapper .fa-times {
     top: 6px;
+  }
+  #popup-wrapper #popup #img-wrapper .fa-chevron-right, #popup-wrapper #popup #img-wrapper .fa-chevron-left {
+    font-size: 25px;
+  }
+  #popup-wrapper #popup .detailDescription {
+    height: 48%;
+  }
+  #popup-wrapper #popup .detailDescription p {
+    font-size: 17px;
+  }
+  #popup-wrapper #popup .detailDescription .popupHeader h4 {
+    font-size: 37px;
+  }
+  #popup-wrapper #popup .detailDescription .popupHeader small {
+    font-size: 12px;
+  }
+  #popup-wrapper #popup .detailDescription a {
+    font-size: 19px;
+    width: 191px;
+    height: 46px;
+    border-radius: 8px;
   }
 
   .projects-section h2 {
@@ -995,9 +1020,10 @@ header .burgerIcon .line3 {
   }
   .projects-section .projects-wrapper .project .image {
     height: 300px;
-    width: 100%;
+    width: 90%;
   }
   .projects-section .projects-wrapper .project .description h4 {
+    text-align: center;
     font-size: 30px;
   }
 
@@ -1010,5 +1036,18 @@ header .burgerIcon .line3 {
   }
   #contact .links i {
     font-size: 70px;
+  }
+}
+@media (max-height: 700px) {
+  #popup-wrapper #popup {
+    clip-path: unset;
+    height: 86%;
+    top: 50px;
+  }
+  #popup-wrapper #popup #img-wrapper .fa-times {
+    top: 6px;
+  }
+  #popup-wrapper #popup #img-wrapper .fa-chevron-right, #popup-wrapper #popup #img-wrapper .fa-chevron-left {
+    font-size: 25px;
   }
 }

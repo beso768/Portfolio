@@ -71,7 +71,7 @@ const projects = $('.project');
 const popup = $('#popup-wrapper');
 const popupCloseBtn = $('.fa-times'); 
 const popupTitle = $('#popupTitle');
-const popupText = $('#popupText');
+// const popupText = $('#popupText');
 const popupDuration = $('#popupDuration');
 const popupTools = $('#popupTools');
 const webLink = $('#webLink');
@@ -98,7 +98,7 @@ function changeContent(project){
     let img = project.children[0].children[0]
     popupImage.css('background-image', `url(${projectsArr[id-1].images[count]})`);
     popupTitle.text(`${projectsArr[id-1].title}`);
-    popupText.text(`${projectsArr[id-1].text}`);
+    // popupText.text(`${projectsArr[id-1].text}`);
     popupTools.text(`${projectsArr[id-1].tools}`);
     popupDuration.text(`${projectsArr[id-1].duration}`);
     webLink.attr('href',`${projectsArr[id-1].link}`)

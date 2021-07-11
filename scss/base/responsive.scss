@@ -207,20 +207,25 @@
         }
     }
 }
-@media (max-width:420px){
+//mobile
+@media (max-width:420px) {
     //header
     header{
         height: 5px;
         nav{
-            width: 115px;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+            width: 92px;
             .burgerIcon{
-                height: 45px;
+               height: 41px;
+               .line1,.line2,.line3{
+                    margin: 3px 0px;
+               }
             }
         }
     }
     //banner
     .banner-text{
-        height: 50%;
+        height: 320px;
         a{
             flex-direction: column;
             font-size: 20px;
@@ -235,10 +240,35 @@
         clip-path: unset;
         width: 95%;
         height: 92%;
-        top: 6%;
+        top: 50px;
         padding-top: 0;
-        #img-wrapper .fa-times {
-            top: 6px;
+        #img-wrapper{
+            .fa-times {
+                top: 6px;
+            }
+            .fa-chevron-right,.fa-chevron-left {
+                font-size: 25px;
+            }
+        }
+        .detailDescription{
+            height: 48%;
+            p{
+                font-size: 17px;
+            }
+            .popupHeader{
+                h4{
+                    font-size: 37px;
+                }
+                small{
+                    font-size: 12px;
+                }
+            }
+            a{
+                font-size: 19px;
+                width: 191px;
+                height: 46px;
+                border-radius: 8px;
+            }
         }
     }
     //projects
@@ -249,10 +279,11 @@
         .projects-wrapper .project {
         .image{
             height: 300px;
-            width: 100%;
+            width: 90%;
         }
         .description{
                 h4{
+                    text-align: center;
                     font-size: 30px;
                 }
             }
@@ -262,7 +293,6 @@
     .about-section p{
         font-size: 27px;
     }
-
     //contact
     #contact {
         .content-wrapper #contact-form button{
@@ -270,6 +300,23 @@
         }
         .links i {
             font-size: 70px;
+        }
+    }
+}
+@media (max-height:700px){
+    
+    //popup
+    #popup-wrapper #popup {
+        clip-path: unset;
+        height: 86%;
+        top: 50px;
+        #img-wrapper{
+            .fa-times {
+                top: 6px;
+            }
+            .fa-chevron-right,.fa-chevron-left {
+                font-size: 25px;
+            }
         }
     }
 }
