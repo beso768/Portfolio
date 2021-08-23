@@ -1,58 +1,103 @@
-.projects-section{
-    @include section;
-    background: rgb(19 19 19 / 91%);
-    backdrop-filter: blur(3px);
-    padding: 2% 2% 2% 5%;
-    .projects-wrapper{
-        @include justify(space-between);
-        flex-wrap: wrap;
-        .project{
-            width: 30%;
-            height: fit-content;
-            position: relative;
-            min-width: 400px;
-            margin: 0 3% 1% 0;
-            cursor: pointer;
-            .image{
-                position: relative;
-                height: 460px;
-                max-width: 560px;
-                transition: 0.2s;
-                @include shadow(7px,black);
-                .hoverBtn{
-                    display: none;
-                    position: absolute;
-                    @include font('noto sans',40px,$font-white);
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    padding: 16px;
-                    border-radius: 47px;
-                    width: max-content;
-                    background: #e04081;
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: top;
-                    transition: 0.3s;
-                }
-                &:hover img{
-                    filter: brightness(0.5);
-                    box-shadow: white 0px 0px 7px 0px;
-                }
-                &:hover .hoverBtn{
-                    display: block;
-                }
-            }
-            .description{
-                h4{
-                    @include font('roboto',64px,$font-white);
-                    margin: 15px 0;
-                }
-            }
-
-        }
+.projects-section {
+  @include section;
+  background: rgb(19 19 19 / 91%);
+  backdrop-filter: blur(3px);
+  padding: 2% 5% 2% 5%;
+  .projects-header {
+    @include justify(space-between);
+    align-items: center;
+  }
+  .categories-header {
+    @include justify(space-between);
+    max-width: 550px;
+    width: 45%;
+    @include font("roboto-bold", 40px, $font-white);
+    cursor: pointer;
+    margin-right: 16px;
+    h3 {
+      padding: 10px;
+      border-radius: 3px;
+      transition: 0.2s;
+      &:hover {
+        background: #e04081;
+      }
     }
+    .active {
+      background: #e04081;
+    }
+  }
+  .projects-wrapper {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 50px;
+    // @include justify(space-between);
+    // flex-wrap: wrap;
+    // max-height: 1000px;
+    // overflow-y: scroll;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: rgb(40 40 40);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $font-white;
+      border-radius: 8px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.753);
+    }
+    .project {
+      height: fit-content;
+      position: relative;
+      cursor: pointer;
+      .image {
+        position: relative;
+        height: 400px;
+        transition: 0.2s;
+        box-shadow: 0px 0px 7px 0 black;
+        @include shadow(7px, black);
+        .hoverBtn {
+          display: none;
+          position: absolute;
+          @include font("noto sans", 40px, $font-white);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 16px;
+          border-radius: 47px;
+          width: max-content;
+          background: #e04081;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          transition: 0.3s;
+        }
+        &:hover img {
+          filter: brightness(0.5);
+          box-shadow: white 0px 0px 7px 0px;
+        }
+        &:hover .hoverBtn {
+          display: block;
+        }
+      }
+      .description {
+        h4 {
+          @include font("roboto", 50px, $font-white);
+          margin: 15px 0;
+        }
+      }
+    }
+  }
 }

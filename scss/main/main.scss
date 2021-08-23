@@ -1,29 +1,30 @@
-html,body{
-    scroll-behavior: smooth;
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 30px;
 }
 
-canvas{
-  display:block;
-  vertical-align:bottom;
+canvas {
+  display: block;
+  vertical-align: bottom;
   height: 100vh !important;
   object-fit: contain;
   position: fixed;
 }
 
-
 /* ---- stats.js ---- */
 
-.count-particles{
+.count-particles {
   background: #000022;
   position: absolute;
   top: 48px;
   left: 0;
   width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
+  color: #13e8e9;
+  font-size: 0.8em;
   text-align: left;
   text-indent: 4px;
   line-height: 14px;
@@ -32,40 +33,39 @@ canvas{
   font-weight: bold;
 }
 
-.js-count-particles{
+.js-count-particles {
   font-size: 1.1em;
 }
 
 #stats,
-.count-particles{
+.count-particles {
   -webkit-user-select: none;
   margin-top: 5px;
   margin-left: 5px;
 }
 
-#stats{
+#stats {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 
-.count-particles{
+.count-particles {
   border-radius: 0 0 3px 3px;
 }
 
-
 /* ---- particles.js container ---- */
 
-#particles-js{
+#particles-js {
   width: 100%;
   height: 100%;
   background-color: rgb(233, 233, 233);
-  background-image: url('');
+  background-image: url("");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   height: 100vh;
 }
-#popup-wrapper{
+#popup-wrapper {
   display: none;
   position: fixed;
   width: 100vw;
@@ -74,8 +74,12 @@ canvas{
   left: 0;
   z-index: 3;
   backdrop-filter: brightness(0.5);
-  // popup 
-  #popup{
+  // popup
+  #popup {
+    max-height: 1024px;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    max-width: 1300px;
     width: 85%;
     height: 92%;
     background: aliceblue;
@@ -83,12 +87,12 @@ canvas{
     display: flex;
     flex-direction: column;
     left: 50%;
-    transform: translate(-50%);
-    top: 5%;
+    transform: translate(-50%, -50%);
+    top: 50%;
     border-radius: 10px;
     @include shadow(3px, #ffffff59);
-    #img-wrapper{
-      background-image: url('');
+    #img-wrapper {
+      background-image: url("");
       width: 100%;
       height: 65%;
       position: relative;
@@ -96,102 +100,105 @@ canvas{
       background-size: cover;
       border-radius: 10px;
       transition: all 0.1s;
-      @include shadow(8px ,black);
-      .fa-times{
+      @include shadow(8px, black);
+      .fa-times {
         @include icons;
         top: -38px;
         right: 0;
         opacity: 0;
+        filter: drop-shadow(2px 4px 6px black);
       }
-      .fa-chevron-left{
+      .fa-chevron-left {
         left: 5px;
       }
-      .fa-chevron-right ,.fa-chevron-left {
+      .fa-chevron-right,
+      .fa-chevron-left {
         @include icons;
         bottom: 13px;
         padding: 10px;
-        &:hover{
+        &:hover {
           backdrop-filter: brightness(0.5);
         }
       }
-      .fa-chevron-right{
+      .fa-chevron-right {
         right: 5px;
       }
-      &:hover .fa-times{
+      &:hover .fa-times {
         opacity: 1;
       }
     }
 
-    .detailDescription{
+    .detailDescription {
       padding: 2%;
+      height: 32%;
+      max-height: 300px;
       @include justify(space-between);
       flex-direction: column;
-      .popupHeader{
-        @include d-flex(space-between,center);
-        h4{
-          @include font('roboto',$font-size2,#000000c7)
+      .popupHeader {
+        @include d-flex(space-between, center);
+        h4 {
+          @include font("roboto", $font-size2, #000000c7);
         }
-        small{
+        small {
           color: #545454;
-          .fa-calendar-alt{
-            margin-right: 10px
+          .fa-calendar-alt {
+            margin-right: 10px;
           }
-          @media (max-width:768px){
-              font-size: 20px;
+          @media (max-width: 768px) {
+            font-size: 20px;
           }
         }
       }
 
-      p{
-        @include font('roboto',25px,#000000c7);
+      p {
+        @include font("roboto", 25px, #000000c7);
         margin: 2% 0;
-        #popupTools{
+        #popupTools {
           color: rgb(165 165 165);
         }
       }
-      a{
+      a {
         @include button;
         width: 220px;
         height: 67px;
       }
-      .projectLinks{
+      .projectLinks {
         display: flex;
-        #gitLink{
+        #gitLink {
           margin-left: 3%;
           background: $blue;
         }
-        #webLink{
+        #webLink {
           background: $pink;
         }
       }
     }
   }
-
 }
-.navChange{
+.navChange {
   width: 100vw;
   height: 100vh;
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  @media (max-width:420px){
+  @media (max-width: 420px) {
     clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%);
   }
   background-color: rgb(27 36 47 / 97%);
   position: fixed;
 }
-.liChange{
+.liChange {
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 1;
 }
-.line1Change{
+.line1Change {
   transform: rotate(134deg) translate(-2px, -11px);
   width: 50px !important;
 }
-.line2Change{
+.line2Change {
   display: none;
 }
-.line3Change{
+.line3Change {
   transform: rotate(45deg) translate(3px, -11px);
   width: 50px !important;
 }

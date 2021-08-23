@@ -111,7 +111,9 @@ li {
   font-style: normal;
   font-display: swap;
 }
-html, body {
+html,
+body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -134,7 +136,7 @@ canvas {
   top: 48px;
   left: 0;
   width: 80px;
-  color: #13E8E9;
+  color: #13e8e9;
   font-size: 0.8em;
   text-align: left;
   text-indent: 4px;
@@ -187,6 +189,10 @@ canvas {
   backdrop-filter: brightness(0.5);
 }
 #popup-wrapper #popup {
+  max-height: 1024px;
+  justify-content: space-between;
+  padding-bottom: 2%;
+  max-width: 1300px;
   width: 85%;
   height: 92%;
   background: aliceblue;
@@ -194,8 +200,8 @@ canvas {
   display: flex;
   flex-direction: column;
   left: 50%;
-  transform: translate(-50%);
-  top: 5%;
+  transform: translate(-50%, -50%);
+  top: 50%;
   border-radius: 10px;
   box-shadow: 0px 0px 3px 0 #ffffff59;
 }
@@ -218,11 +224,13 @@ canvas {
   top: -38px;
   right: 0;
   opacity: 0;
+  filter: drop-shadow(2px 4px 6px black);
 }
 #popup-wrapper #popup #img-wrapper .fa-chevron-left {
   left: 5px;
 }
-#popup-wrapper #popup #img-wrapper .fa-chevron-right, #popup-wrapper #popup #img-wrapper .fa-chevron-left {
+#popup-wrapper #popup #img-wrapper .fa-chevron-right,
+#popup-wrapper #popup #img-wrapper .fa-chevron-left {
   position: absolute;
   color: white;
   transition: 0.2s;
@@ -230,7 +238,8 @@ canvas {
   bottom: 13px;
   padding: 10px;
 }
-#popup-wrapper #popup #img-wrapper .fa-chevron-right:hover, #popup-wrapper #popup #img-wrapper .fa-chevron-left:hover {
+#popup-wrapper #popup #img-wrapper .fa-chevron-right:hover,
+#popup-wrapper #popup #img-wrapper .fa-chevron-left:hover {
   backdrop-filter: brightness(0.5);
 }
 #popup-wrapper #popup #img-wrapper .fa-chevron-right {
@@ -241,6 +250,8 @@ canvas {
 }
 #popup-wrapper #popup .detailDescription {
   padding: 2%;
+  height: 32%;
+  max-height: 300px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -477,7 +488,7 @@ header .burgerIcon .line3 {
   padding: 2% 5%;
   background: rgba(19, 19, 19, 0.91);
   backdrop-filter: blur(3px);
-  padding: 2% 2% 2% 5%;
+  padding: 2% 5% 2% 5%;
 }
 .projects-section h2 {
   font-family: "roboto-bold";
@@ -504,24 +515,66 @@ header .burgerIcon .line3 {
     font-size: 50px;
   }
 }
-.projects-section .projects-wrapper {
+.projects-section .projects-header {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+}
+.projects-section .categories-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 550px;
+  width: 45%;
+  font-family: "roboto-bold";
+  font-size: 40px;
+  color: #e9e9e9;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.projects-section .categories-header h3 {
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.projects-section .categories-header h3:hover {
+  background: #e04081;
+}
+.projects-section .categories-header .active {
+  background: #e04081;
+}
+.projects-section .projects-wrapper {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 50px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.projects-section .projects-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+.projects-section .projects-wrapper::-webkit-scrollbar-track {
+  background: #282828;
+}
+.projects-section .projects-wrapper::-webkit-scrollbar-thumb {
+  background: #e9e9e9;
+  border-radius: 8px;
+}
+.projects-section .projects-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.753);
 }
 .projects-section .projects-wrapper .project {
-  width: 30%;
   height: fit-content;
   position: relative;
-  min-width: 400px;
-  margin: 0 3% 1% 0;
   cursor: pointer;
 }
 .projects-section .projects-wrapper .project .image {
   position: relative;
-  height: 460px;
-  max-width: 560px;
+  height: 400px;
   transition: 0.2s;
+  box-shadow: 0px 0px 7px 0 black;
   box-shadow: 0px 0px 7px 0 black;
 }
 .projects-section .projects-wrapper .project .image .hoverBtn {
@@ -554,7 +607,7 @@ header .burgerIcon .line3 {
 }
 .projects-section .projects-wrapper .project .description h4 {
   font-family: "roboto";
-  font-size: 64px;
+  font-size: 50px;
   color: #e9e9e9;
   margin: 15px 0;
 }
@@ -783,7 +836,6 @@ header .burgerIcon .line3 {
 @media (max-width: 1024px) {
   header {
     height: 10px;
-    position: fixed;
     z-index: 20;
     box-shadow: 0px 0px 4px 0 #e9e9e9;
   }
@@ -803,14 +855,8 @@ header .burgerIcon .line3 {
   }
 
   #popup-wrapper #popup {
-    clip-path: polygon(83% 0, 88% 5%, 100% 5%, 100% 100%, 0 100%, 0 0);
-    width: 85%;
-    height: 92%;
-    top: 5%;
-    padding-top: 43px;
-    justify-content: space-between;
-    overflow: hidden;
-    background: #1b242f;
+    width: 90%;
+    height: 85%;
   }
   #popup-wrapper #popup .detailDescription {
     background: aliceblue;
@@ -842,10 +888,10 @@ header .burgerIcon .line3 {
     margin-bottom: 25px;
   }
 
-  .projects-section .projects-wrapper .project {
-    min-width: 0;
+  .projects-section .projects-wrapper {
+    grid-template-columns: 47% 47%;
   }
-  .projects-section .projects-wrapper .project .description h4 {
+  .projects-section .project .description h4 {
     font-size: 50px;
   }
 
@@ -876,18 +922,32 @@ header .burgerIcon .line3 {
   .projects-section {
     padding: 2%;
   }
+  .projects-section .projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .projects-section .projects-header .categories-header {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    font-family: roboto-bold;
+    font-size: 35px;
+    color: #e9e9e9;
+    cursor: pointer;
+    margin: 0;
+  }
   .projects-section .projects-wrapper {
     justify-content: center;
   }
   .projects-section .projects-wrapper .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     margin: 0px 0 5% 0px;
   }
   .projects-section .projects-wrapper .project .description h4 {
     font-size: 42px;
+    text-align: center;
   }
 
   .about-section .languages-section .front-end-logos {
@@ -914,18 +974,14 @@ header .burgerIcon .line3 {
   #contact .links a {
     margin: 10px 30px;
   }
-  #contact .links .fa-github, #contact .links .fa-facebook {
+  #contact .links .fa-github,
+#contact .links .fa-facebook {
     margin-right: 0px;
   }
 }
 @media (max-width: 770px) {
-  #popup-wrapper #popup {
-    clip-path: polygon(71% 0px, 78% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px);
-    width: 95%;
-    height: 92%;
-    top: 5%;
-  }
-  #popup-wrapper #popup #img-wrapper .fa-chevron-left, #popup-wrapper #popup #img-wrapper .fa-chevron-right {
+  #popup-wrapper #popup #img-wrapper .fa-chevron-left,
+#popup-wrapper #popup #img-wrapper .fa-chevron-right {
     backdrop-filter: contrast(0.5);
     font-size: 60px;
   }
@@ -934,6 +990,11 @@ header .burgerIcon .line3 {
     width: 202px;
     height: 56px;
   }
+
+  .projects-section .projects-wrapper {
+    grid-template-columns: 95%;
+    gap: 50px;
+  }
 }
 @media (max-width: 600px) {
   .banner-text h1 {
@@ -941,8 +1002,9 @@ header .burgerIcon .line3 {
     line-height: 63px;
   }
 
-  #popup-wrapper #popup {
-    clip-path: polygon(62% 0px, 70% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px);
+  .projects-section .projects-header .categories-header {
+    width: 100%;
+    font-size: 25px;
   }
 
   .about-section .languages-section .front-end-logos {
@@ -967,7 +1029,9 @@ header .burgerIcon .line3 {
   header nav .burgerIcon {
     height: 41px;
   }
-  header nav .burgerIcon .line1, header nav .burgerIcon .line2, header nav .burgerIcon .line3 {
+  header nav .burgerIcon .line1,
+header nav .burgerIcon .line2,
+header nav .burgerIcon .line3 {
     margin: 3px 0px;
   }
 
@@ -983,17 +1047,11 @@ header .burgerIcon .line3 {
     line-height: 44px;
   }
 
-  #popup-wrapper #popup {
-    clip-path: unset;
-    width: 95%;
-    height: 92%;
-    top: 50px;
-    padding-top: 0;
-  }
   #popup-wrapper #popup #img-wrapper .fa-times {
     top: 6px;
   }
-  #popup-wrapper #popup #img-wrapper .fa-chevron-right, #popup-wrapper #popup #img-wrapper .fa-chevron-left {
+  #popup-wrapper #popup #img-wrapper .fa-chevron-right,
+#popup-wrapper #popup #img-wrapper .fa-chevron-left {
     font-size: 25px;
   }
   #popup-wrapper #popup .detailDescription {
@@ -1047,7 +1105,8 @@ header .burgerIcon .line3 {
   #popup-wrapper #popup #img-wrapper .fa-times {
     top: 6px;
   }
-  #popup-wrapper #popup #img-wrapper .fa-chevron-right, #popup-wrapper #popup #img-wrapper .fa-chevron-left {
+  #popup-wrapper #popup #img-wrapper .fa-chevron-right,
+#popup-wrapper #popup #img-wrapper .fa-chevron-left {
     font-size: 25px;
   }
 }
