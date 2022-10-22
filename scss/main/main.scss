@@ -52,7 +52,6 @@ canvas {
 .count-particles {
   border-radius: 0 0 3px 3px;
 }
-
 /* ---- particles.js container ---- */
 
 #particles-js {
@@ -64,6 +63,9 @@ canvas {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   height: 100vh;
+  max-width: 1920px;
+  overflow: hidden;
+  z-index: 100;
 }
 #popup-wrapper {
   display: none;

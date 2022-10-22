@@ -6,18 +6,81 @@ $("#contactTitle").text("<Contact>");
 const allProjects = [
   {
     images: [
-      "./images/iliauni/iliauni1.png",
-      "./images/iliauni/iliauni2.png",
-      "./images/iliauni/iliauni3.png",
-      "./images/iliauni/iliauni4.png",
+      "./images/feazy/feazy1.png",
+      "./images/feazy/feazy2.png",
+      "./images/feazy/feazy3.png",
+      "./images/feazy/feazy4.png",
+      "./images/feazy/feazy5.png",
+      "./images/feazy/feazy6.png",
+      "./images/feazy/feazy7.png",
+      "./images/feazy/feazy8.png",
     ],
-    title: "Online Iliauni",
-    text: "",
-    tools: "Html,Css(Bootrstrap),Javascript",
+    title: "Feazy Dashboard",
+    tools:
+      "Feazy’s philosophy is to help academies scale faster by automating time-consuming manual tasks.Skills: Amazon Dynamodb · SQL · Express.js · React.js · Node.js · Nest.js",
+    duration: "10 Months",
+    category: ["all"],
+    link: "https://app-test.feazy.io/",
+  },
+  {
+    images: [
+      "./images/argus/argus4.png",
+      "./images/argus/argus2.png",
+      "./images/argus/argus1.png",
+      "./images/argus/argus3.png",
+      "./images/argus/argus5.png",
+      "./images/argus/argus6.png",
+      "./images/argus/argus7.png",
+      "./images/argus/argus8.png",
+    ],
+    title: "Argus",
+    tools:
+      "Argus is an electronic selection system, which was specially created for Iliauni students and helps them plan their learning process effectively and contributes to their awareness. Skills: TypeScript · Responsive Web Design · Tailwind CSS · React.js · SASS",
+    duration: "12 Months",
+    category: ["all"],
+    link: "https://argus.iliauni.io/en",
+  },
+  {
+    images: [
+      "./images/wallypayL/1.png",
+      "./images/wallypayL/2.png",
+      "./images/wallypayL/3.png",
+      "./images/wallypayL/4.png",
+    ],
+    title: "Wallypay Landing Page",
+    tools:
+      "Designed and developed user-friendly website, including optimized check-out page that increased user clicks, and subscequently customer purchases. Skills: · JavaScript · Jquery · CSS· HTML ",
+    duration: "8 Months",
+    category: ["all"],
+    link: "https://wallypay.eu/?l=en",
+  },
+  {
+    images: [
+      "./images/feazyL/3.png",
+      "./images/feazyL/1.png",
+      "./images/feazyL/2.png",
+      "./images/feazyL/4.png",
+    ],
+    title: "Feazy Landing",
+    tools:
+      "Feazy’s philosophy is to help academies scale faster by automating time-consuming manual tasks.Skills: Amazon AMP · Next.js · Tailwind CSS",
     duration: "4 Months",
     category: ["all"],
-    link: "https://nokak.github.io/Online-IliaUni/",
-    code: "https://github.com/beso768/Online-IliaUni",
+    link: "https://www.feazy.io/#Home",
+  },
+  {
+    images: [
+      "./images/wallypay/1.png",
+      "./images/wallypay/2.png",
+      "./images/wallypay/3.png",
+      "./images/wallypay/4.png",
+    ],
+    title: "Wallypay Dashboard",
+    tools:
+      "The Wallypay dashboard page, which is used only by employees, helps them perform various operations,such as: checking users transactions,Wallypay's customers information, process of identomat and etc.Skills: Redux.js , React , Typescript",
+    duration: "8 Months",
+    category: ["all"],
+    link: "https://joaty.wallypay.eu/?app=Common&cl=Login&do=login&back_url=",
   },
   {
     images: [
@@ -48,16 +111,6 @@ const allProjects = [
     code: "https://github.com/beso768/Unilab",
   },
   {
-    images: ["./images/books/book3.png", "./images/books/book2.png"],
-    title: "Interactive Books Library",
-    text: "",
-    tools: "Html,Css(Bootstrap),Javascript",
-    category: ["all"],
-    duration: "1 Months",
-    link: "https://iel.iliauni.edu.ge/index.html",
-    code: "https://github.com/beso768/Interactive-books-library",
-  },
-  {
     images: [
       "./images/motorcycles/motorcycle-website3.png",
       "./images/motorcycles/motorcycle-website1.png",
@@ -72,16 +125,6 @@ const allProjects = [
     duration: "1 Month",
     link: "https://beso768.github.io/Final-project/",
     code: "https://github.com/beso768/Final-project",
-  },
-  {
-    images: ["./images/quiz/quiz.jpg", "./images/quiz/table.jpg"],
-    title: "Quiz app",
-    text: "",
-    tools: "Html,Css,React",
-    category: ["all", "react"],
-    duration: "1 day",
-    link: "https://codepen.io/beso123/pen/WNpxdzQ",
-    code: "https://hidden-everglades-80267.herokuapp.com/",
   },
   {
     images: ["./images/codepen/promodoro.png"],
